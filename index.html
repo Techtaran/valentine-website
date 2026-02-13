@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Love Page 1</title>
+    <style>
+        body {
+            background-color: #ffd6e8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: bold;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #yesBtn, #maybeBtn {
+            position: absolute;
+        }
+
+        #correctBtn {
+            background-color: #ff4d6d;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Hey viran do you love your babygirl ?</h1>
+
+<button id="yesBtn" onmouseover="moveButton(this)">Yes</button>
+<button id="maybeBtn" onmouseover="moveButton(this)">Maybe</button>
+<button id="correctBtn" onclick="nextPage()">More than anything</button>
+
+<script>
+    function moveButton(button) {
+        button.style.top = Math.random() * window.innerHeight + "px";
+        button.style.left = Math.random() * window.innerWidth + "px";
+    }
+
+    function nextPage() {
+        window.location.href = "page2.html";
+    }
+</script>
+
+</body>
+</html>
